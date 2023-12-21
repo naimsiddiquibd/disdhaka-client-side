@@ -33,7 +33,7 @@ const page = () => {
         'Football',
     ];
     return (
-        <div className='bg-[#F8F8F8] pt-5'>
+        <div className='bg-[#F8F8F8] pt-20'>
             <div className="grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-2 md:px-10 px-4">
                 {/* Left side */}
                 <div className="bg-white rounded-md hidden lg:inline h-[700px]">

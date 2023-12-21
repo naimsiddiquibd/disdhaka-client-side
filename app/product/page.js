@@ -2,10 +2,36 @@ import React from 'react';
 import Image from 'next/image';
 import s1 from '../assets/coke1.png';
 import s2 from '../assets/coke2.png';
+import blurImage from '../assets/bg.png';
+import overlayImage from '../assets/bg2.png';
 
 const Page = () => {
     return (
-        <div className="carousel w-1/2">
+       <div className='relative min-h-screen flex items-center justify-center pt-10'>
+
+        {/* Background Image */}
+        <div className="absolute inset-0">
+                <Image
+                    src={blurImage}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={100}
+                    alt="Background Image"
+                />
+            </div>
+
+            {/* Overlay Image */}
+            <div className="absolute inset-0">
+                <Image
+                    src={overlayImage}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={100}
+                    alt="Overlay Image"
+                />
+            </div>
+
+         <div className="carousel w-1/2">
             <div id="slide1" className="carousel-item relative w-full justify-center">
                 <Image
                     src={s1}
@@ -33,6 +59,7 @@ const Page = () => {
                 </div>
             </div>
         </div>
+       </div>
     );
 };
 
