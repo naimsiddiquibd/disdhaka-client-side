@@ -1,0 +1,39 @@
+.apple-watch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* Add position: relative */
+  }
+  
+  .zoom-circle {
+    width: 61px;
+    height: 61px;
+    background-color: #3498db;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transform-origin: center center;
+    position: relative; /* Add position: relative */
+    z-index: 1; /* Set initial z-index */
+  }
+  
+  .zoom-animation {
+    animation: zoomInOut 1s ease-in-out; /* Total duration of 4 seconds */
+  }
+  
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.5);
+      z-index: 10; /* Set z-index to bring it to the front */
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
